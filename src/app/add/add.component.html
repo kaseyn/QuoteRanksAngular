@@ -1,0 +1,15 @@
+<form (submit)="onSubmit()" #formData="ngForm">
+	<label><h1>Add A Quote</h1></label>
+	<textarea name="content"
+	required
+	minlength="4"
+	[(ngModel)]="quote.content"
+	#content="ngModel"></textarea>
+	<label>Author</label>
+	<input type="text" name="author"
+	required
+	minlength="1"
+	[(ngModel)]="quote.author"
+	#author="ngModel">
+	<input type="submit" value="Add Quote">
+</form>
